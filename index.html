@@ -78,6 +78,12 @@
             </div>
             <div class="file-upload-content">
                 <img class="file-upload-image" id="trash-image" src="#" alt="your image" />
+                <p class="result2">
+                    
+                </p>
+                <p class="result3">
+                    
+                </p>
                 <p class="resultmessage">
                     
                 </p>
@@ -150,21 +156,31 @@
                 prediction.sort((a,b) => parseFloat(b.probability) -  parseFloat(a.probability));
                 console.log(prediction[0].className);
                 var resultmessage;
+                var result2;
+                var result3;
                 switch(prediction[0].className)
                        {
                            case "부탄가스":
+                               result2 = "이 쓰레기의 분류는..."
+                               result3 = "부탄가스"
                                resultmessage = "부탄가스를 버릴때 가스통을 거꾸로 세워서 눌러주셔서 남은 가스를 제거하고 오프너로 구멍을 뚫어서 캔으로 분리수거 하시면 됩니다. 이때 못이나 송곳으로 뚫을 시 마찰로 인한 스파크가 발생해서 불이 날 수도 있습니다.";
                                break;
                            case "배터리":
+                               result2 = "이 쓰레기의 분류는..."
+                               result3 = "배터리"
                                resultmessage = "배터리는 일반쓰레기나 플라스틱으로 분리배출 해서는 안되고 꼭 폐건전지 수거함에 버려주셔야 합니다.";
                                break;
                            case "페트병":
+                               result2 = "이 쓰레기의 분류는..."
+                               result3 = "페트병"
                                resultmessage = "투명 페트병은 내용물을 비우고 라벨을 제거해서 찌그러트리고 버려주셔야 합니다. 그리고 유색 플라스틱과 구분해서 분리배출 하셔야 합니다.";
                                break;
                            default:
                                resultmessage = "알 수 없음";
                                break;
                        }
+                $('.result2').html(result2);
+                $('.result3').html(result3);
                 $('.resultmessage').html(resultmessage);
                 // for (let i = 0; i < maxPredictions; i++) {
                 //     const classPrediction =
