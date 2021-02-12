@@ -6,13 +6,16 @@ body {
 .file-upload {
   background-color: #ffffff;
   width: 600px;
-  margin: 0 auto;
   padding: 20px;
-  width: 914px;
+  width: 70vw;
   height: 50vw;
   border-radius: 10px;
   border: solid 1.5px #f6f7fa;
   background-color: #f6f7fa;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 15vw;
+  margin-light: 15vw;
 }
 
 .file-upload-btn {
@@ -150,18 +153,6 @@ body {
         font-size: 2tem;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
